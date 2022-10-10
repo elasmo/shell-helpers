@@ -1,0 +1,4 @@
+#!/bin/sh
+zcopy() {
+        tar zcvf - "$1" | base64 -w 0 | xsel
+}

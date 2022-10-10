@@ -1,0 +1,4 @@
+#!/bin/sh
+genrand() {
+	tr -dc '[:graph:]' < /dev/urandom | head -c "$(shuf -i 17-35 -n 1)"
+}

@@ -1,0 +1,15 @@
+#!/bin/sh
+genpass() {
+	wordlist="/usr/share/dict/words"
+	nwords="$(wc -l "$wordlist" | cut -f 1 -d ' ')"
+
+	i=0
+	while [ "$i" -ne 4 ]; do
+		randword="$(shuf -i 1-$nwords -n 1 --random-source=/dev/urandom)"
+		word="$(head -n $randword $wordlist | tail -1)"
+		printf "$word "
+    		i=$((i + 1))
+	done
+
+	printf "\n"
+}

@@ -1,0 +1,6 @@
+#!/bin/sh
+hexrand() {
+	tr -dc "[:xdigit:]" < /dev/urandom | head -c "$(shuf -i 18-34 -n1)"
+	echo
+	#openssl rand -hex "$(shuf -i 18-34 -n 1)"
+}

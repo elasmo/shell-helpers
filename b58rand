@@ -1,0 +1,6 @@
+#!/bin/sh
+b58rand() {
+	tr -dc "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz" \
+		< /dev/urandom | head -c $(shuf -i 17-35 -n 1)
+	echo
+}

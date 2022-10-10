@@ -1,0 +1,4 @@
+#!/bin/sh
+zpaste() {
+        xsel | base64 -d | tar xvfz -
+}

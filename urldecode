@@ -1,0 +1,6 @@
+#!/bin/sh
+urldecode() {
+	url="0:$(echo -n "$@" | sed 's/%/ /g')"
+	echo "$url" | xxd -r
+	#busybox httpd -d "$url"
+}
