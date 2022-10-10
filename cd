@@ -1,0 +1,10 @@
+#!/bin/sh
+cd() {
+	if [ -n "$1" ]; then
+		builtin cd "$@"
+		ls
+	else
+		builtin cd ~
+		ls
+	fi
+}
